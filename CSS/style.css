@@ -1,0 +1,394 @@
+/* Thando's Vehicle Care - Main Website Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: #111827;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    height: 130px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #f59e0b;
+    color: #111827;
+}
+
+nav a.active {
+    background-color: #f59e0b;
+    color: #111827;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: auto;
+    padding: 48px 0;
+    flex: 1;
+}
+
+.page-title {
+    color: #111827;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ================= HOME PAGE ================= */
+
+.hero {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef2f7
+    );
+
+    border-radius: 16px;
+    padding: 50px 25px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.hero h1 {
+    color: #111827;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #4b5563;
+}
+
+/* ================= ABOUT ================= */
+
+.section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+.section h2 {
+    color: #b45309;
+    margin-bottom: 12px;
+}
+
+.section p {
+    margin-bottom: 14px;
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background-color: white;
+    border-left: 5px solid #f59e0b;
+    border-radius: 10px;
+    padding: 25px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h2 {
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #b45309;
+    margin-top: 12px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery figure {
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-radius: 7px;
+
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-details {
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+.contact-details h2 {
+    margin-bottom: 15px;
+    color: #b45309;
+}
+
+.contact-details p {
+    margin: 12px 0;
+}
+
+.contact-details a {
+    color: #b45309;
+    font-weight: bold;
+}
+
+/* ================= FORM ================= */
+
+form {
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+
+    font: inherit;
+    background-color: white;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #f59e0b;
+    outline: 3px solid rgba(245, 158, 11, 0.25);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    background-color: #f59e0b;
+    color: #111827;
+
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover,
+button:focus {
+    background-color: #d97706;
+    transform: translateY(-1px);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+
+    text-align: center;
+
+    padding: 18px 20px;
+    margin-top: auto;
+
+    font-size: 0.95rem;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 35px 0;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 560px) {
+
+    .nav-container {
+        padding: 15px 12px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 105px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav li,
+    nav a {
+        width: 100%;
+    }
+
+    nav a {
+        padding: 9px;
+    }
+
+    main {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .hero {
+        min-height: 45vh;
+        padding: 35px 18px;
+    }
+
+    .section,
+    form,
+    .contact-details,
+    .service-card {
+        padding: 20px;
+    }
+
+    .services,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
